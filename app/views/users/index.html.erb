@@ -6,7 +6,7 @@
     </button>
 
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <div class="form-inline mx-auto">
+        <div class="form-inline mx-auto d-flex justify-content-center">
             <input class="form-control text-center mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn bg-primary my-2 my-sm-0 d-none d-lg-block" type="submit">Search</button>
         </div>
@@ -57,7 +57,7 @@
     </div>
 </nav>
 
-<table class="table table-dark table-hover">
+<table class="table table-dark table-hover mb-0">
     <thead class="thead-light">
         <tr>
             <th scope="col"> # </th>
@@ -68,9 +68,9 @@
     </thead>
     <tbody>
         <tbody>
-        <% @users.each do |user|%>
+        <% @users.each_with_index do |user,i|%>
             <tr>
-                <th scope="row"><%=user.id%></th>
+                <th scope="row"><%= i+1%></th>
                 <td><%=user.fname%></td>
                 <td><%=user.rank%></td>
                 <td><%=user.username%></td>
@@ -85,7 +85,7 @@
 
 
 <!--Footer-->
-<footer class="page-footer d-none d-lg-block fixed-bottom font-small h-15 stylish-color-dark pt-4 mt-4 ">
+<footer class="page-footer d-none d-lg-block fixed-bottom position-relative font-small h-15 stylish-color-dark pt-4 ">
 
     <!--Footer Links-->
     <div class="container text-center text-md-left">
