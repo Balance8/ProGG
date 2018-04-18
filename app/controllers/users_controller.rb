@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
-  def new
-    # Provide the model instance to the form_for helper
-    @user = User.new
+    
+    def new
+        # Provide the model instance to the form_for helper
+        @user = User.new
+    end
+
+    def index
+        @users = User.all
     end
 
   def create

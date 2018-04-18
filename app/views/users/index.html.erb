@@ -13,18 +13,18 @@
 
         <ul class="navbar-nav ">
             <li class="text-white text-center">
-            <% if current_user %>
-                Welcome,
-                <%= current_user.fname %>
-                    &nbsp;&nbsp;|&nbsp;&nbsp;
-                    
-                    <%= link_to 'Log Out', session_path('dummy'), method: :delete, class: "btn btn-sm btn-primary" %>
-                    
-                        <% else %>
-                            <%= link_to 'Log In', login_path, class: "btn btn-sm btn-primary"%>
-                                &nbsp;&nbsp;|&nbsp;&nbsp;
-                                <%= link_to 'Register', new_user_path, class: "btn btn-sm btn-primary" %>
-                                    <% end %>
+                <% if current_user %>
+                    Welcome,
+                    <%= current_user.fname %>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+
+                        <%= link_to 'Log Out', session_path('dummy'), method: :delete, class: "btn btn-sm btn-primary" %>
+
+                            <% else %>
+                                <%= link_to 'Log In', login_path, class: "btn btn-sm btn-primary"%>
+                                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                                    <%= link_to 'Register', new_user_path, class: "btn btn-sm btn-primary" %>
+                                        <% end %>
             </li>
         </ul>
         <%# <ul class="navbar-nav ">
@@ -52,7 +52,7 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Disabled</a>
             </li> %>
-        <%# </ul> %>
+                <%# </ul> %>
 
     </div>
 </nav>
@@ -68,24 +68,14 @@
     </thead>
     <tbody>
         <tbody>
+        <% @users.each do |user|%>
             <tr>
-                <th scope="row">1</th>
-                <td>Michael Slocum</td>
-                <td>Diamond 4</td>
-                <td>BaIance</td>
+                <th scope="row"><%=user.id%></th>
+                <td><%=user.fname%></td>
+                <td><%=user.rank%></td>
+                <td><%=user.username%></td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Megan Barnes</td>
-                <td>Gold 1</td>
-                <td>Husscat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Gregg Gross</td>
-                <td>Diamond 2</td>
-                <td>Bear Swag</td>
-            </tr>
+        <% end %>
         </tbody>
 
 
