@@ -11,11 +11,15 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :fullname %>
-    <%= f.text_field :fullname %>
+    <%= f.label :fname,"First Name" %>
+    <%= f.text_field :fname %>
+  </div>
+  <div class="field">
+    <%= f.label :lname,'Last Name' %>
+    <%= f.text_field :lname %>
   </div>
    <div class="field">
-    <%= f.label :username %>
+    <%= f.label :username,'User Name' %>
     <%= f.text_field :username %>
   </div>
    <div class="field">
@@ -31,7 +35,7 @@
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation, "Re-Enter Password" %>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions"><%= f.submit %></div>

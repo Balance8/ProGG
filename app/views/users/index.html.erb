@@ -11,25 +11,32 @@
             <button class="btn bg-primary my-2 my-sm-0 d-none d-lg-block" type="submit">Search</button>
         </div>
 
-        <p>
-  <% if current_user %>
-    Welcome, <%= current_user.fullname %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
-  <% else %>
-    <%= link_to 'Log In', login_path %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to 'Sign Up', new_user_path %>
-  <% end %>
-</p>
         <ul class="navbar-nav ">
+            <li class="text-white text-center">
+            <% if current_user %>
+                Welcome,
+                <%= current_user.fname %>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    
+                    <%= link_to 'Log Out', session_path('dummy'), method: :delete, class: "btn btn-sm btn-primary" %>
+                    
+                        <% else %>
+                            <%= link_to 'Log In', login_path, class: "btn btn-sm btn-primary"%>
+                                &nbsp;&nbsp;|&nbsp;&nbsp;
+                                <%= link_to 'Register', new_user_path, class: "btn btn-sm btn-primary" %>
+                                    <% end %>
+            </li>
+        </ul>
+        <%# <ul class="navbar-nav ">
             <li class="nav-item btn-primary text-center">
                 <a class="nav-link" href="/login">Log In
                 </a>
             </li>
             <li class="nav-item text-center">
                 <a class="nav-link" href="/users/new">Register</a>
-            </li>
+            </li> %>
+
+
             <%# <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
@@ -45,7 +52,7 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Disabled</a>
             </li> %>
-        </ul>
+        <%# </ul> %>
 
     </div>
 </nav>
@@ -100,18 +107,18 @@
             <%# <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">PRO.GG</h6>
             </div> %>
-            <!--/.First column-->
+                <!--/.First column-->
 
-          
 
-            <!--Second column-->
-           
-            <!--/.Second column-->
 
-          
+                <!--Second column-->
 
-            <!--Third column-->
-            <%# <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <!--/.Second column-->
+
+
+
+                <!--Third column-->
+                <%# <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
                 <p>
                     <a href="#!">Your Account</a>
@@ -121,75 +128,75 @@
                 </p>
 
             </div> %>
-            <!--/.Third column-->
+                    <!--/.Third column-->
 
-    
 
-            <!--Fourth column-->
-            <%# <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+
+                    <!--Fourth column-->
+                    <%# <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
 
                     <i class="fa fa-envelope mr-3"></i> info@gmail.com</p>
                 <p>
                     <i class="fa fa-phone mr-3"></i> +1 (800) 123-4567</p>
             </div> %>
-            <!--/.Fourth column-->
+                        <!--/.Fourth column-->
 
-        <%# </div> %>
-        <!-- Footer links -->
+                        <%# </div> %>
+                            <!-- Footer links -->
 
-        <%# <hr> %>
+                            <%# <hr> %>
 
-        <div class="row py-3 d-flex align-items-center">
+                                <div class="row py-3 d-flex align-items-center">
 
-            <!--Grid column-->
-            <div class="col-md-8 col-lg-8">
+                                    <!--Grid column-->
+                                    <div class="col-md-8 col-lg-8">
 
-                <!--Copyright-->
-                <p class="text-center text-md-left grey-text">© 2018 Copyright:
-                    <a href="#">
-                        <strong> PRO.GG</strong>
-                    </a>
-                </p>
-                <!--/.Copyright-->
+                                        <!--Copyright-->
+                                        <p class="text-center text-md-left grey-text">© 2018 Copyright:
+                                            <a href="#">
+                                                <strong> PRO.GG</strong>
+                                            </a>
+                                        </p>
+                                        <!--/.Copyright-->
 
-            </div>
-            <!--Grid column-->
+                                    </div>
+                                    <!--Grid column-->
 
-            <!--Grid column-->
-            <div class="col-md-4 col-lg-4 ml-lg-0">
+                                    <!--Grid column-->
+                                    <div class="col-md-4 col-lg-4 ml-lg-0">
 
-                <!--Social buttons-->
-                <div class="text-center text-md-right">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!--/.Social buttons-->
+                                        <!--Social buttons-->
+                                        <div class="text-center text-md-right">
+                                            <ul class="list-unstyled list-inline">
+                                                <li class="list-inline-item">
+                                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                                        <i class="fa fa-google-plus"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                                        <i class="fa fa-linkedin"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--/.Social buttons-->
 
-            </div>
-            <!--Grid column-->
+                                    </div>
+                                    <!--Grid column-->
 
-        </div>
+                                </div>
 
     </div>
 
