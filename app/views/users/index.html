@@ -1,204 +1,46 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">PRO.GG</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <div class="form-inline mx-auto">
-            <input class="form-control text-center mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn bg-primary my-2 my-sm-0 d-none d-lg-block" type="submit">Search</button>
+<h1>Sign Up</h1>
+<%= form_for @user do |f| %>
+    <% if @user.errors.any? %>
+        <div class="error_messages">
+            <h2>Form is invalid</h2>
+            <ul>
+                <% for message in @user.errors.full_messages %>
+                    <li>
+                        <%= message %>
+                    </li>
+                    <% end %>
+            </ul>
         </div>
-
-        <ul class="navbar-nav ">
-            <li class="text-white text-center">
-                <% if current_user %>
-                    Welcome,
-                    <%= current_user.fname %>
-                        &nbsp;&nbsp;|&nbsp;&nbsp;
-
-                        <%= link_to 'Log Out', session_path('dummy'), method: :delete, class: "btn btn-sm btn-primary" %>
-
-                            <% else %>
-                                <%= link_to 'Log In', login_path, class: "btn btn-sm btn-primary"%>
-                                    &nbsp;&nbsp;|&nbsp;&nbsp;
-                                    <%= link_to 'Register', new_user_path, class: "btn btn-sm btn-primary" %>
-                                        <% end %>
-            </li>
-        </ul>
-        <%# <ul class="navbar-nav ">
-            <li class="nav-item btn-primary text-center">
-                <a class="nav-link" href="/login">Log In
-                </a>
-            </li>
-            <li class="nav-item text-center">
-                <a class="nav-link" href="/users/new">Register</a>
-            </li> %>
-
-
-            <%# <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li> %>
-                <%# </ul> %>
-
-    </div>
-</nav>
-
-<table class="table table-dark table-hover">
-    <thead class="thead-light">
-        <tr>
-            <th scope="col"> # </th>
-            <th scope="col">Name</th>
-            <th scope="col">Rank</th>
-            <th scope="col">User Name</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Michael Slocum</td>
-                <td>Diamond 4</td>
-                <td>BaIance</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Megan Barnes</td>
-                <td>Gold 1</td>
-                <td>Husscat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Gregg Gross</td>
-                <td>Diamond 2</td>
-                <td>Bear Swag</td>
-            </tr>
-        </tbody>
-
-
-</table>
-
-<!-- <div class="ranking-pagination"> -->
-
-
-<!--Footer-->
-<footer class="page-footer d-none d-lg-block fixed-bottom font-small h-15 stylish-color-dark pt-4 mt-4 ">
-
-    <!--Footer Links-->
-    <div class="container text-center text-md-left">
-
-        <!-- Footer links -->
-        <%# <div class="row text-center text-md-left mt-3 pb-3"> %>
-
-            <!--First column-->
-            <%# <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">PRO.GG</h6>
-            </div> %>
-                <!--/.First column-->
-
-
-
-                <!--Second column-->
-
-                <!--/.Second column-->
-
-
-
-                <!--Third column-->
-                <%# <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
-                <p>
-                    <a href="#!">Your Account</a>
-                </p>
-                <p>
-                    <a href="#!">Support</a>
-                </p>
-
-            </div> %>
-                    <!--/.Third column-->
-
-
-
-                    <!--Fourth column-->
-                    <%# <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-
-                    <i class="fa fa-envelope mr-3"></i> info@gmail.com</p>
-                <p>
-                    <i class="fa fa-phone mr-3"></i> +1 (800) 123-4567</p>
-            </div> %>
-                        <!--/.Fourth column-->
-
-                        <%# </div> %>
-                            <!-- Footer links -->
-
-                            <%# <hr> %>
-
-                                <div class="row py-3 d-flex align-items-center">
-
-                                    <!--Grid column-->
-                                    <div class="col-md-8 col-lg-8">
-
-                                        <!--Copyright-->
-                                        <p class="text-center text-md-left grey-text">© 2018 Copyright:
-                                            <a href="#">
-                                                <strong> PRO.GG</strong>
-                                            </a>
-                                        </p>
-                                        <!--/.Copyright-->
-
-                                    </div>
-                                    <!--Grid column-->
-
-                                    <!--Grid column-->
-                                    <div class="col-md-4 col-lg-4 ml-lg-0">
-
-                                        <!--Social buttons-->
-                                        <div class="text-center text-md-right">
-                                            <ul class="list-unstyled list-inline">
-                                                <li class="list-inline-item">
-                                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                                        <i class="fa fa-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                                        <i class="fa fa-twitter"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                                        <i class="fa fa-google-plus"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                                        <i class="fa fa-linkedin"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!--/.Social buttons-->
-
-                                    </div>
-                                    <!--Grid column-->
-
-                                </div>
-
-    </div>
-
-</footer>
-<!--/.Footer-->
+        <% end %>
+            <div class="field">
+                <%= f.label :fname,"First Name" %>
+                    <%= f.text_field :fname %>
+            </div>
+            <div class="field">
+                <%= f.label :lname,'Last Name' %>
+                    <%= f.text_field :lname %>
+            </div>
+            <div class="field">
+                <%= f.label :username,'User Name' %>
+                    <%= f.text_field :username %>
+            </div>
+            <div class="field">
+                <%= f.label :rank %>
+                    <%= f.text_field :rank %>
+            </div>
+            <div class="field">
+                <%= f.label :email %>
+                    <%= f.text_field :email %>
+            </div>
+            <div class="field">
+                <%= f.label :password %>
+                    <%= f.password_field :password %>
+            </div>
+            <div class="field">
+                <%= f.label :password_confirmation, "Re-Enter Password" %>
+                    <%= f.password_field :password_confirmation %>
+            </div>
+            <div class="actions">
+                <%= f.submit %>
+            </div>
+            <% end %>
