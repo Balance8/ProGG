@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
 
   private
 
-  # Make the current_user method available to views, not just controllers!
   helper_method :current_user
 
   def current_user

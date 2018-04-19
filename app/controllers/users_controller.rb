@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   def new
-    # Provide the model instance to the form_for helper
     @user = User.new
   end
 

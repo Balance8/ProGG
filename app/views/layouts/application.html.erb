@@ -26,10 +26,6 @@
                 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
                 <!-- MDB core JavaScript -->
                 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
-
-
-
-
 </head>
 
 <body>
@@ -52,12 +48,9 @@
                         Welcome,
                         <%= link_to current_user.fname.capitalize, profile_path, class:"text-white" %>
                             &nbsp;&nbsp;|&nbsp;&nbsp;
-
-
                             <a class="dropdown-toggle fixed-center text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 Profile
-
                             </a>
                             <div class="dropdown-menu"style="margin-left:103pxpx;" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/profile">View Profile</a>
@@ -65,15 +58,7 @@
                                 <div class="dropdown-divider"></div>
                                 <%=link_to 'Delete Account', user_path("dummy"), method: :delete %>
                             </div>
-
-
-
-
-
-
                             <%= link_to 'Log Out', session_path('dummy'), method: :delete, class: "btn btn-sm bg-primary" %>
-
-
                                 <% else %>
                                     <%= link_to 'Log In', login_path, class: "btn btn-sm bg-primary" %>
                                         &nbsp;&nbsp;|&nbsp;&nbsp;
