@@ -8,6 +8,9 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def show
+    @user = params[:id] ? User.find(params[:id]) : current_user
+  end
   def create
     @user = User.new(user_params)
     if @user.save
@@ -17,6 +20,11 @@ class UsersController < ApplicationController
     else
       render :new
     end
+ end
+ 
+ def destroy
+  current_user.destroy
+  redirect_to root_path
  end
 
   private

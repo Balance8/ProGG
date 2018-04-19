@@ -1,44 +1,24 @@
-<!--<div class="row text-center">
-
-    <form class="form-signin" style="margin: 0 auto; width: 100%; margin-top: 50px;" _lpchecked="1">
-    <h2 class="form-signin-heading">Please sign in</h2>
-    <%= form_tag sessions_path do %>
-    <%= text_field_tag :email, params[:email], class:"form-control text-center", placeholder:"Email address"%>
-    <%= password_field_tag :password, class:"form-control text-center",placeholder:"Password" %>
-    <%# <input type="password" id="inputPassword" class="form-control text-center" placeholder="Password" required="" autocomplete="off"> %>
-    <div class="checkbox">
-        <label>
-        <input type="checkbox" value="remember-me"> Remember me
-        </label>
-    </div>
-    <%= submit_tag "Log In",class: "btn btn-lg btn-primary btn-block"%>
-    </form>
-    <% end %>
-
-   
-</div>
-<-->
 <div class="row text-center">
-<div class="form-signin" style="margin: 0 auto; width: 90%; margin-top: 100px;">
-<h2>Please Sign In</h2>
-<%= form_tag sessions_path do %>
-    <div class="field">
-        
-            <%= text_field_tag :email, params[:email], class:"form-control text-center mt-5 mb-2", placeholder:"Email address"%>
+    <div class="form-signin" style="margin: 0 auto; width: 90%; margin-top: 100px;">
+        <h2>Please Sign In</h2>
+        <%= form_tag sessions_path do %>
+            <div class="field">
+
+                <%= text_field_tag :email, params[:email], class:"form-control text-center mt-5 mb-2", placeholder:"Email address"%>
+            </div>
+            <div class="field">
+                <%= password_field_tag :password, "", class:"form-control text-center mb-2", placeholder:"Password"%>
+            </div>
+            <div class="actions">
+                <%= submit_tag "Log In",class: "btn btn-lg btn-primary btn-block mt-5",style:"margin: 0 auto; width: 35%;" %>
+            </div>
+            <% end %>
     </div>
-    <div class="field">
-            <%= password_field_tag :password, "", class:"form-control text-center mb-2", placeholder:"Password"%>
-    </div>
-    <div class="actions">
-        <%= submit_tag "Log In",class: "btn btn-lg btn-primary btn-block mt-5",style:"margin: 0 auto; width: 35%;" %>
-    </div>
-    <% end %>
 </div>
-</div>
 
 
 
-    <!--Footer-->
+<!--Footer-->
 <footer class="page-footer d-none d-lg-block fixed-bottom font-small h-15 stylish-color-dark pt-4 ">
 
     <!--Footer Links-->
@@ -98,7 +78,7 @@
 
                                         <!--Copyright-->
                                         <p class="text-center text-md-left grey-text">© 2018 Copyright:
-                                            <a href="#">
+                                            <a href="/">
                                                 <strong> PRO.GG</strong>
                                             </a>
                                         </p>
