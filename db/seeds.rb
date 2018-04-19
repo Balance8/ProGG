@@ -9,20 +9,11 @@
 
 User.destroy_all
 
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd1', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd2', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd3', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd4', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd5', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd6', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd7', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd8', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd9', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd10', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd11', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd12', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd13', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd14', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd15', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd16', password: 'asd')
-User.create(username: 'Turtle', fname: 'Jason', lname: 'Tran', rank: 'Challenger 700 lp', email: 'asd17', password: 'asd')
+User.create(username: 'BaIance', fname: 'Michael', lname: 'Slocum', rank: 'Diamond 2', email: 'asd1@gmail.com', password: 'asd')
+User.create(username: 'Husscat', fname: 'Megan', lname: 'Barnes', rank: 'Gold 1', email: 'asd2@gmail.com', password: 'asd')
+User.create(username: 'WahDonka', fname: 'Brad', lname: 'Ez', rank: 'Diamond 2', email: 'asd3@gmail.com', password: 'asd')
+User.create(username: 'New Begin', fname: 'Greg', lname: 'Gross', rank: 'Diamond 2', email: 'asd4@gmail.com', password: 'asd')
+User.create(username: 'Begin New', fname: 'Ian', lname: 'Kingsbury', rank: 'Diamond 2', email: 'asd4@gmail.com', password: 'asd')
+User.create(username: 'Icehazerd', fname: 'Randy', lname: 'Slocum', rank: 'Diamond 2', email: 'asd4@gmail.com', password: 'asd')
+User.create(username: 'Hushcat', fname: 'Mike', lname: 'Slocum', rank: 'Diamond 2', email: 'asd4@gmail', password: 'asd')
+
