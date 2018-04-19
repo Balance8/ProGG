@@ -16,13 +16,13 @@
                             <%= i+1%>
                         </th>
                         <td>
-                            <%=user.fname%>
+                            <%=user.fname.capitalize%>
                         </td>
                         <td>
-                            <%=user.rank%>
+                            <%=user.rank.capitalize%>
                         </td>
                         <td>
-                            <%= link_to user.username, user_path(user), class:"btn btn-primary text-white"%>
+                            <%= link_to user.username.capitalize, user_path(user), class:"btn btn-primary text-white text-capitalize"%>
                         </td>
                     </tr>
                     <% end %>

@@ -1,8 +1,8 @@
-<h1>profile</h1>
+<h1 class="display-1 text-center pt-4 underline"><u><%=@user.fname.capitalize+" "+@user.lname.capitalize%></u></h1>
 
-<p><%=@user.fname%></p>
-<p><%=@user.lname%></p>
-<p><%=@user.username%></p>
-<p>rank: <%=@user.rank%></p>
-<p><%=@user.email%></p>
-<p><%=@user.lname%></p>
+<p class="display-4 text-center pt-4 ">OP.GG: <%=link_to @user.username.capitalize, "http://na.op.gg/summoner/userName=#{@user.username}",target: :_blank, class:'text-muted btn btn-primary ' %></p>
+<p class="lead text-center pt-4">Rank: <%=@user.rank.capitalize%></p>
+<p class="lead text-center pt-4">Contact Me At: <%=@user.email.capitalize%></p>
+
+
+
