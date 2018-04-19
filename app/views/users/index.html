@@ -1,48 +1,15 @@
-<div class="row text-center">
-    <div class="form-signin" style="margin: 0 auto; width: 90%; margin-top: 75px;">
-        <h2 class="mb-3">Sign Up</h2>
-        <%= form_for @user do |f| %>
-            <% if @user.errors.any? %>
+<h1 class="display-1 text-center pt-4 underline">
+    <u>
+        <%=@user.fname.capitalize+" "+@user.lname.capitalize%>
+    </u>
+</h1>
 
-                <div class="error_messages">
-                    <h2 class="alert alert-danger">Please Try Again</h2>
-                    <% for message in @user.errors.full_messages %>
-                        <div class='alert alert-warning' style="margin: 0 auto; width: 50%;>
-                        <%= message %>
-                    </div>
-                    <% end %>
-        </div>
-        <% end %>
-            <div class=" field ">
-                
-                    <%= f.text_field :fname, class:"form-control text-center mt-5 mb-2 ", placeholder:"First Name "%>
-            </div>
-            <div class="field ">
-                
-                    <%= f.text_field :lname, class:"form-control text-center mb-2 ", placeholder:"Last Name " %>
-            </div>
-            <div class="field ">
-                
-                    <%= f.text_field :username, class:"form-control text-center mb-2 ", placeholder:"User Name " %>
-            </div>
-            <div class="field ">
-                
-                    <%= f.text_field :rank, class:"form-control text-center mb-2 ", placeholder:"Rank " %>
-            </div>
-            <div class="field ">
-                
-                    <%= f.text_field :email, class:"form-control text-center mb-2 ", placeholder:"Email " %>
-            </div>
-            <div class="field ">
-                
-                    <%= f.password_field :password, class:"form-control text-center mb-2 ", placeholder:"Password " %>
-            </div>
-            <div class="field ">
-
-                    <%= f.password_field :password_confirmation, class:"form-control text-center mb-2 ", placeholder:"Confim
-                            Password " %>
-            </div>
-            <div class="actions ">
-                <%= f.submit "Submit ", class: "btn btn-lg btn-primary btn-block mt-5 ",style:"margin: 0 auto; width: 40%; "%>
-            </div>
-            <% end %>
+<p class="display-4 text-center pt-4 ">OP.GG:
+    <%=link_to @user.username.capitalize, "http://na.op.gg/summoner/userName=#{@user.username}",target: :_blank, class:'text-muted btn btn-primary text-capitalize ' %>
+</p>
+<p class="lead text-center pt-4">Rank:
+    <%=@user.rank.capitalize%>
+</p>
+<p class="lead text-center pt-4">Contact Me At:
+    <%=@user.email.capitalize%>
+</p>

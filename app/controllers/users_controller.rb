@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def show
     @user = params[:id] ? User.find(params[:id]) : current_user
   end
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -21,11 +22,24 @@ class UsersController < ApplicationController
       render :new
     end
  end
- 
- def destroy
-  current_user.destroy
-  redirect_to root_path
- end
+
+  def edit
+    @user = current_user
+  end
+
+  def update
+    @user = current_user
+    if @user.update_attributes(params.require(:user).permit(:fname, :lname, :username, :email, :rank))
+      redirect_to profile_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    current_user.destroy
+    redirect_to root_path
+  end
 
   private
 

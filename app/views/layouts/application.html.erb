@@ -50,33 +50,34 @@
                 <li class="text-white dropdown text-center" id="dropdownmobile">
                     <% if current_user %>
                         Welcome,
-                        <%= current_user.fname.capitalize %>
+                        <%= link_to current_user.fname.capitalize, profile_path, class:"text-white" %>
                             &nbsp;&nbsp;|&nbsp;&nbsp;
-                            
-                            
-                                <a class="dropdown-toggle fixed-center text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+
+                            <a class="dropdown-toggle fixed-center text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
                                 Profile
 
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/profile">View Profile</a>
-                                    <a class="dropdown-item" href="#">Settings</a>
-                                    <div class="dropdown-divider"></div>
-                                    <%=link_to 'Delete Account', user_path("dummy"), method: :delete %>
-                                </div>
+                            </a>
+                            <div class="dropdown-menu"style="margin-left:103pxpx;" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/profile">View Profile</a>
+                                <a class="dropdown-item" href="/profile/edit">Edit Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <%=link_to 'Delete Account', user_path("dummy"), method: :delete %>
+                            </div>
 
-                                
-                           
-                            
-                            
 
-                            <%= link_to 'Log Out', session_path('dummy'), method: :delete, class: "btn btn-sm btn-primary" %>
+
+
+
+
+                            <%= link_to 'Log Out', session_path('dummy'), method: :delete, class: "btn btn-sm bg-primary" %>
 
 
                                 <% else %>
-                                    <%= link_to 'Log In', login_path, class: "btn btn-sm btn-primary" %>
+                                    <%= link_to 'Log In', login_path, class: "btn btn-sm bg-primary" %>
                                         &nbsp;&nbsp;|&nbsp;&nbsp;
-                                        <%= link_to 'Register', new_user_path, class: "btn btn-sm btn-primary" %>
+                                        <%= link_to 'Register', new_user_path, class: "btn btn-sm bg-primary" %>
                                             <% end %>
 
                 </li>

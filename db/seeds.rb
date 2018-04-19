@@ -16,4 +16,9 @@ User.create(username: 'New Begin', fname: 'Greg', lname: 'Gross', rank: 'Diamond
 User.create(username: 'Begin New', fname: 'Ian', lname: 'Kingsbury', rank: 'Diamond 2', email: 'asd4@gmail.com', password: 'asd')
 User.create(username: 'Icehazerd', fname: 'Randy', lname: 'Slocum', rank: 'Diamond 2', email: 'asd4@gmail.com', password: 'asd')
 User.create(username: 'Hushcat', fname: 'Mike', lname: 'Slocum', rank: 'Diamond 2', email: 'asd4@gmail', password: 'asd')
-
+User.create(username: 'Hushcat', fname: 'Mike', lname: 'Slocum', rank: 'Diamond 2', email: 'asd5@gmail', password: 'asd')
+User.create(username: 'Hushcat', fname: 'Mike', lname: 'Slocum', rank: 'Diamond 2', email: 'asd6@gmail', password: 'asd')
+User.create(username: 'Hushcat', fname: 'Mike', lname: 'Slocum', rank: 'Diamond 2', email: 'asd7@gmail', password: 'asd')
+User.create(username: 'Hushcat', fname: 'Mike', lname: 'Slocum', rank: 'Diamond 2', email: 'asd8@gmail', password: 'asd')
+User.create(username: 'Hushcat', fname: 'Mike', lname: 'Slocum', rank: 'Diamond 2', email: 'asd9@gmail', password: 'asd')
+User.create(username: 'Hushcat', fname: 'Mike', lname: 'Slocum', rank: 'Diamond 2', email: 'asd10@gmail', password: 'asd')
