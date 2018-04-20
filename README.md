@@ -16,11 +16,14 @@ HTML, CSS, Bootstrap, Ruby, Rails
 
 PRO.GG focuses on allowing gamers to create profiles,browse other profiles, and meet up with people they like. 
 
-First a user must register their account,
+First a user must register their account
 
 ![screen shot of register](https://i.imgur.com/5tCyv7i.png)
 
-Next, log in.
+
+Once registered, you automatically log in.
+
+(But here is a shot of the log in screen)
 
 ![screen shot of login](https://i.imgur.com/SrRcpZN.png)
 
