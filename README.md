@@ -31,6 +31,14 @@ A unique feature of PRO.GG is that you do not need an account to browse other pr
 ![screen shot of login](https://i.imgur.com/HUWguuL.png)
 
 
+## Organization
+
+https://trello.com/b/VgzVh232/progg
+
+![screen shot of login](https://i.imgur.com/h9la4xN.png)
+
+
+
 ## Next Steps
 
 I would like to add a search feature that will redirect the user to a new list, featuring only the designated requirements. 
