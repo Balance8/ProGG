@@ -1,80 +1,47 @@
 <div class="row text-center">
-    <div class="form-signin" style="margin: 0 auto; width: 90%; margin-top: 100px;">
-        <h2>Please Sign In</h2>
-        <%= form_tag sessions_path do %>
-            <div class="field">
+<div class="form-signin" style="margin: 0 auto; width: 90%; margin-top: 75px;">
+<h2 class="mb-3">Sign Up</h2>
+<%= form_for @user do |f| %>
+    <% if @user.errors.any? %>
 
-                <%= text_field_tag :email, params[:email], class:"form-control text-center mt-5 mb-2", placeholder:"Email address"%>
+        <div class="error_messages">
+            <h2 class="alert alert-danger">Please Try Again</h2>
+                <% for message in @user.errors.full_messages %>
+                    <div class='alert alert-warning' style="margin: 0 auto; width: 50%;">
+                        <%= message %>
+                    </div>
+                    <% end %>
+        </div>
+        <% end %>
+            <div class="field">
+                
+                    <%= f.text_field :fname, class:"form-control text-center mt-5 mb-2 text-capitalize", placeholder:"First Name"%>
             </div>
             <div class="field">
-                <%= password_field_tag :password, "", class:"form-control text-center mb-2", placeholder:"Password"%>
+                
+                    <%= f.text_field :lname, class:"form-control text-center mb-2 text-capitalize", placeholder:"Last Name" %>
+            </div>
+            <div class="field">
+                
+                    <%= f.text_field :username, class:"form-control text-center mb-2", placeholder:"User Name" %>
+            </div>
+            <div class="field">
+                
+                    <%= f.text_field :rank, class:"form-control text-center mb-2 text-capitalize", placeholder:"Rank" %>
+            </div>
+            <div class="field">
+                
+                    <%= f.text_field :email, class:"form-control text-center mb-2", placeholder:"Email" %>
+            </div>
+            <div class="field">
+                
+                    <%= f.password_field :password, class:"form-control text-center mb-2", placeholder:"Password" %>
+            </div>
+            <div class="field">
+
+                    <%= f.password_field :password_confirmation, class:"form-control text-center mb-2", placeholder:"Confim Password" %>
             </div>
             <div class="actions">
-                <%= submit_tag "Log In",class: "btn btn-lg btn-primary btn-block mt-5",style:"margin: 0 auto; width: 35%;" %>
+                <%= f.submit "Submit", class: "btn btn-lg btn-primary btn-block mt-5",style:"margin: 0 auto; width: 40%;"%>
             </div>
             <% end %>
-    </div>
-</div>
-
-
-
-<!--Footer-->
-<footer class="page-footer d-none d-lg-block fixed-bottom font-small h-15 stylish-color-dark pt-4 ">
-
-    <!--Footer Links-->
-    <div class="container text-center text-md-left">
-        <div class="row py-3 d-flex align-items-center">
-
-            <!--Grid column-->
-            <div class="col-md-8 col-lg-8">
-
-                <!--Copyright-->
-                <p class="text-center text-md-left grey-text">© 2018 Copyright:
-                    <a href="/">
-                        <strong> PRO.GG</strong>
-                    </a>
-                </p>
-                <!--/.Copyright-->
-
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-md-4 col-lg-4 ml-lg-0">
-
-                <!--Social buttons-->
-                <div class="text-center text-md-right">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!--/.Social buttons-->
-
-            </div>
-            <!--Grid column-->
-
-        </div>
-
-    </div>
-
-</footer>
-<!--/.Footer-->
