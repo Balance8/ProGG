@@ -35,7 +35,7 @@ A unique feature of PRO.GG is that you do not need an account to browse other pr
 
 https://trello.com/b/VgzVh232/progg
 
-![screen shot of login](https://i.imgur.com/h9la4xN.png)
+![screen shot of login](https://i.imgur.com/2VZUnP9.png)
 
 
 
